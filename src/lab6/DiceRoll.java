@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class DiceRoll {
 	static Scanner scnr = new Scanner(System.in);
+	static int count = 0;
 	public static void main(String[] args) {
 		boolean retry = true;
 		header();		
@@ -86,8 +87,9 @@ public class DiceRoll {
 	private static void printResults(int sides) {
 		int die1 = generateRandomDieRoll(sides);
 		int die2 = generateRandomDieRoll(sides);
+		count++;
 		
-		System.out.println("\nRoll 1:");
+		System.out.println("\nRoll " + count + ":");
 		if (die1 == 1 && die2 == 1) {
 			System.out.println("SNAKE EYES!... CRAP :(");
 		} else if (die1 == 6 && die2 == 6) {
