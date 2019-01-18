@@ -70,8 +70,8 @@ public class DiceRoll {
 			}	
 		}
 		
-		if (Integer.parseInt(input) == 0) {
-			System.out.println("Everything is equal to 0 which is too boring to display, try again...");
+		if (Integer.parseInt(input) < 4) {
+			System.out.println("Dice are 3-dimensional solids, think about it and try again...");
 			return false;
 		} else {
 			return true;
